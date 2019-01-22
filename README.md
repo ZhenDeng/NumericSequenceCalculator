@@ -30,6 +30,4 @@ d.	All numbers up to and including the number entered, except when,
 
 1. Using Visual Studios to open project
 
-2. Build the project and waiting bower to installing required packages
-
-3. Run the project
+2. Run the project
