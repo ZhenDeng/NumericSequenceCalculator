@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model CalculatorModel
+
+@section scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+
+<div class="col-md-6 col-md-offset-3">
+    <div class="well">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly"></div>
+
+            <div class="form-group">
+                <label asp-for="OutputAll">All numbers:</label>
+                <input asp-for="OutputAll" class="form-control" disabled />
+                <span asp-validation-for="OutputAll" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OutputEven">Even numbers:</label>
+                <input asp-for="OutputEven" class="form-control" disabled />
+                <span asp-validation-for="OutputEven" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OutputOdd">Odd numbers:</label>
+                <input asp-for="OutputOdd" class="form-control" disabled />
+                <span asp-validation-for="OutputOdd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OutputCondition">Conditional numbers:</label>
+                <input asp-for="OutputCondition" class="form-control" disabled />
+                <span asp-validation-for="OutputCondition" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input">Please input an integer:</label>
+                <input type="number" asp-for="Input" class="form-control" />
+                <span asp-validation-for="Input" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-calendar-check-o"></i> Calculate</button>
+                <div class="text-success">@ViewBag.UserMessage</div>
+            </div>
+        </form>
+    </div>
+</div>
